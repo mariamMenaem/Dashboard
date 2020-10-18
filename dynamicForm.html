@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dynamic Form</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Dashboard</div>
+            <div class="list-group list-group-flush ">
+                <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
+                <a href="Qquestion.html" class="list-group-item list-group-item-action bg-light">Question Bank</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Dynamic Form</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-secondary" id="menu-toggle"><i class="fa fa-bars"></i></button>
+                </button>
+            </nav>
+            <div class="container-fluid">
+                <table id="my-table" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>col1</th>
+                            <th>col2</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td><button class="btn btn-sm btn-danger delRow">Delete row</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><button class="btn btn-sm btn-danger delRow">Delete row</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button id="addColum" class="btn btn-sm btn-primary">add colum</button>
+                <button id="addRow" class="btn btn-sm btn-primary ">add row</button>
+            </div>
+        </div>
+    </div>
+  
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Question Bank</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Dashboard</div>
+            <div class="list-group list-group-flush ">
+                <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Question Bank</a>
+                <a href="dynamicForm.html" class="list-group-item list-group-item-action bg-light">Dynamic Form</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-secondary" id="menu-toggle"><i class="fa fa-bars"></i></button>
+            </nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-md-4">
+                        <form class="question-form">
+                            <div class="form-group">
+                              <label for="title">Question Title</label>
+                              <input type="text" class="form-control"  id="title" placeholder="Title" required> 
+                            </div>
+                            <div class="form-group">
+                                <label for="choice-1">Choice 1</label>
+                                <input type="text" class="form-control" id="choice-1" placeholder="Choice-1" required>
+    
+                              </div>
+                              <div class="form-group">
+                                <label for="choice-2">Choice 2</label>
+                                <input type="text" class="form-control" id="choice-2" placeholder="Choice-2" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="choice-3">Choice 3</label>
+                                <input type="text" class="form-control" id="choice-3" placeholder="Choice-3" required>
+    
+                              </div>
+                              <div class="form-group">
+                                <label for="choice-4">Choice 4</label>
+                                <input type="text" class="form-control" id="choice-4" placeholder="Choice-4" required>
+    
+                              </div>
+                              <div class="form-group">
+                                <label for="correct">Correct Choice </label>
+                                <input type="text" class="form-control" id="correct" placeholder="Correct choice" required>
+    
+                              </div>
+                              <button type="submit" class="btn btn-primary">Add Question</button>
+                          </form>
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Choice 1</th>
+                                    <th>Choice 2</th>
+                                    <th>Choice 3</th>
+                                    <th>Choice 4</th>
+                                    <th>Correct Choice </th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-table">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
